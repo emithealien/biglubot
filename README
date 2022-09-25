@@ -16,3 +16,5 @@ FAZER A MIGRAÇÃO DO BANCO DE DADOS (Toda vez que alterar o bd, rodar esses com
 - python3 run.py db migrate
 - python3 run.py db upgrade
 
+RODAR O PROJETO
+- python3 run.py runserver
