@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ super() }} - Home{% endblock %}
+
+{% block content %}
+    
+<div class="jumbotron">
+    <h1>Biglu Bot</h1>
+    <p class="lead">Biglu Bot é um mini sistema que te envia notificação da live da streamer <b>BiggyGlue</b> pelo e-mail!</p>
+    <p><a class="btn btn-lg btn-light" href="{{ url_for('sign_up') }}"" role="button">Cadastre-se agora!</a></p>
+</div>
+
+<div class="row marketing">
+<div class="col-lg-6">
+    <h4><b>Já me conhece? Não? Então conheça um pouco agora!</b></h4>
+    <span>Oi, meu nome é <b>Emily Colona</b>, carioca, 23 anoxxx (o sotaque carioca em texto).</span>
+    
+
+    <h4><b>Explicação do username Biggyglue</b></h4>
+    <span>Meu nick é por conta do meu sobrenome. <b>BiggyGlue = Cola Grande = Colona</b>.</span>
+    <p>Alguns acham isso uma piada de tiozão, mas outros acham genial.</p>
+    <p>Aí já é problema seu se você gostou ou não KKKK</p>
+    
+
+    <h4><b>Apelidinhos carinhosos</b></h4>
+    <span>Tem o encurtamento de <b>Biggyglue</b> que é <b>Biglu</b>, tem <b>Ems</b>, <b>Emi</b>... E tem o <b>kikikiki</b>.</span>
+    <p>Esse último eu prefiro que vocês vejam a explicação em vídeo clicando aqui ó: <a target="_blank" href="https://www.twitch.tv/paticakes/clip/GeniusTenderPepperPartyTime-4Kgb1HdDFHNf5Tqt?filter=clips&range=all&sort=time">CLICA NI MIM!!!</a></p>
+</div>
+
+<div class="col-lg-6">
+    <h4><b>Alertas na live</b></h4>
+    <p>Grande parte dos meus alertas tem a ver com bodes. Aí você me pergunta o motivo...
+        Brevemente digo que é porque eu gosto muito deles. Mas o motivo principal só te conto
+        se você for assistir a live hehe >:)
+    </p>
+    <span>
+        <img width="200" height="200" src="{{ url_for('static', filename='goat.jpg') }}" alt="Imagem da BiggyGlue">
+    </span>
+    
+
+    <h4><b>Redes Sociais</b></h4>
+    <ul>
+        <li><a target="_blank" href="https://www.twitch.tv/biggyglue">Twitch</a></li>
+        <li><a target="_blank" href="https://www.instagram.com/biggyglue">Instagram</a></li>
+        <li><a target="_blank" href="https://www.instagram.com/emilycolona">Instagram de arte</a></li>
+    </ul>
+
+</div>
+</div>
+
+{% endblock %}

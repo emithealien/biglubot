@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col-md-4 col-md-offset-4">
+    <h2>Login</h2>
+    <form action="" method="POST">
+        <!-- O csrf_token é necessário para a segurança que o WTF cria e ele
+        precisa ser adicionado junto ao form, se ele nao existir,
+        o form nao é válido -->
+        {{ form.csrf_token }}
+        <div class="form-group">
+            <label>Nome de usuário:</label>
+            {{ form.username(class="form-control", placeholder="seu_usuário") }}
+        </div>
+        <div class="form-group">
+            <label>Senha:</label>
+            {{ form.password(class="form-control") }}
+        </div>
+        <div class="checkbox">
+            <label>
+                {{ form.remember_me }} Lembre-se
+            </label>
+        </div>
+        <button type="Submit" class="btn btn-default">Logue-se</button>
+    </form>
+    </div>
+{% endblock %}
