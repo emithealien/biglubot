@@ -1,0 +1,18 @@
+INSTALAR O VENV
+- python3 -m venv venv
+
+ATIVAR O VENV
+- vá até a pasta .venv\Scripts\
+- digite activate.bat
+
+INSTALAR OS REQUIREMENTS
+- na pasta principal do projeto rodar:
+- pip install -r requirements.txt
+
+INICIAR O BANCO DE DADOS (criar a pasta migrations)
+- python3 run.py db init
+
+FAZER A MIGRAÇÃO DO BANCO DE DADOS (Toda vez que alterar o bd, rodar esses comandos)
+- python3 run.py db migrate
+- python3 run.py db upgrade
+

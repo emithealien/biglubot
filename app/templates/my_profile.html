@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col-md-4 col-md-offset-4">
+    <h2>Perfil</h2>
+    {% if profile %}
+        <p>Olá, {{ profile.username }}!</p>
+
+        <div class="form-group">
+            <form action="/send_mail" method="POST">
+                {% if profile.profile == 'admin' %}
+                        <button class="btn btn-lg btn-success">Enviar notificação de live</button>
+                {% endif %}
+            </form>
+            <br>
+            <button id="butau" type="button" class="btn btn-danger" data-toggle="modal" data-target="#ModalDeleteAccount">
+                Cancelar Inscrição
+            </button>
+        </div>
+
+    {% else %}
+        <p> Olá! </p>
+    {% endif %}
+    </div>
+
+    
+<!-- Modal -->
+<div class="modal" id="ModalDeleteAccount" tabindex="-1" role="dialog" aria-labelledby="ModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalTitle">Deseja mesmo cancelar a inscrição?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Isso irá <b>APAGAR</b> sua conta para sempre no Biglu Bot e consequentemente parar as notificações por email.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-danger" onclick="window.location.href='{{ url_for('delete_user') }}'">Apagar Conta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(function(){
+        $("#butau").on("click", function(){
+            console.log('aaaa');
+            $('#modalExemplo').modal('show');
+        });
+    });
+    
+</script>
+    
+
+    
+{% endblock %}
